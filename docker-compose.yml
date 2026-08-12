@@ -1,0 +1,46 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: synapse_user
+      POSTGRES_PASSWORD: synapse_pass
+      POSTGRES_DB: synapse_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U synapse_user -d synapse_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  python:
+    build:
+      context: .
+      dockerfile: docker/python.Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://synapse_user:synapse_pass@db:5432/synapse_db
+      SECRET_KEY: docker-production-secret-key-change-me
+      CORS_ORIGINS: '["http://localhost:3000"]'
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - model_data:/app/app/ml
+
+  node:
+    build:
+      context: .
+      dockerfile: docker/node.Dockerfile
+    ports:
+      - "3000:80"
+    depends_on:
+      - python
+
+volumes:
+  pgdata:
+  model_data:
