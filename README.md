@@ -407,28 +407,6 @@ The frontend will be available at:
 http://localhost:5173
 ```
 
----
-
-# 📚 API Documentation
-
-FastAPI automatically generates interactive API documentation.
-
-## Swagger UI
-
-```text
-http://localhost:8000/docs
-```
-
-## ReDoc
-
-```text
-http://localhost:8000/redoc
-```
-
-Swagger UI can be used to explore endpoints, inspect schemas, and test API requests directly from the browser.
-
----
-
 # 🔐 Authentication
 
 Synapse AI uses **JWT-based authentication** to protect user accounts and API resources.
@@ -615,93 +593,9 @@ Synapse AI demonstrates the integration of modern software engineering and artif
 - API integration
 - Modern frontend development
 - Production-oriented backend architecture
-
+- 
 ---
 
-# 🔮 Future Improvements
-
-## 🐳 Infrastructure
-
-- Docker containerization
-- PostgreSQL production deployment
-- CI/CD pipeline
-- Cloud deployment
-- Environment-based configuration
-- Automated deployment
-
-## 🤖 AI & Machine Learning
-
-- Larger training dataset
-- Transformer-based text classification
-- Sentence embeddings
-- Semantic search
-- Vector database integration
-- RAG-powered note assistant
-- AI-generated summaries
-- AI-powered recommendations
-- Personalized AI insights
-
-## 👥 Collaboration
-
-- Real-time collaboration
-- Shared notes
-- Team workspaces
-- Collaborative editing
-- Multi-user AI assistance
-
----
-
-# 🧠 Future AI Architecture
-
-The future version of Synapse AI can evolve from basic text classification into a complete AI-powered knowledge assistant using embeddings and Retrieval-Augmented Generation.
-
-```text
-                         User Notes
-                             ↓
-                      Text Processing
-                             ↓
-              ┌──────────────┴──────────────┐
-              ↓                             ↓
-       Classification                  Embeddings
-              ↓                             ↓
-         Categories                   Vector Store
-                                            ↓
-                                     Semantic Search
-                                            ↓
-                                         RAG Layer
-                                            ↓
-                                      AI Assistant
-```
-
----
-
-# 🔄 Future AI Workflow
-
-```text
-User
-  ↓
-Create / Search Notes
-  ↓
-Text Processing
-  ↓
-┌──────────────────────┐
-│                      │
-↓                      ↓
-Classification      Embeddings
-│                      │
-↓                      ↓
-Categories         Vector Store
-                       ↓
-                Semantic Retrieval
-                       ↓
-                    RAG Layer
-                       ↓
-                 AI Assistant
-                       ↓
-              Context-Aware Response
-```
-
----
 
 # 🛡️ Security
 
@@ -835,29 +729,9 @@ This project is licensed under the **MIT License**.
 
 ---
 
-# 👩‍💻 Author
-
-## Syeda Sumayya
-
-**Software Engineer | AI Engineer | Robotics Engineer | Full-Stack Developer**
-
-### GitHub
-
-[github.com/syedasumayya](https://github.com/syedasumayya)
-
----
-
 # ⭐ Support
 
 If you find **Synapse AI** useful or interesting, consider giving the repository a ⭐ on GitHub.
-
----
-
-# ❤️ Built With
-
-Built with ❤️ using:
-
-**React · TypeScript · Vite · Tailwind CSS · Zustand · FastAPI · Python · Pydantic · SQLAlchemy · SQLite · PostgreSQL · scikit-learn · Chart.js · JWT · Machine Learning**
 
 ---
 
